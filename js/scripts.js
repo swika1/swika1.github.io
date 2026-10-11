@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var roleEl = document.getElementById("roleText");
   if (roleEl) {
     var roles = [
+      "Research Intern @ ÉTS Montréal",
       "AI Engineer",
       "Full-Stack Developer",
       "Machine Learning Researcher",

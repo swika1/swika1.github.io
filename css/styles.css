@@ -348,6 +348,8 @@ section.tight { padding: 90px 0; }
   border-radius: var(--radius-sm); padding: 16px; text-align: center;
 }
 .metric .mv { font-family: var(--ff-mono); font-weight: 700; font-size: 1.3rem; color: var(--accent-2); }
+.pub-gap { margin-bottom: 28px; }
+.tl-tags { margin-top: 16px; }
 .metric .ml { font-size: 0.74rem; color: var(--text-dim); margin-top: 6px; line-height: 1.4; }
 
 /* ---------- Skills ---------- */
@@ -465,3 +467,4 @@ section.tight { padding: 90px 0; }
   .float-card { padding: 9px 12px; }
   .float-card .num { font-size: 1rem; }
 }
+html, body { overflow-x: clip; }
