@@ -2,571 +2,436 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="Ouadahi Mohand Belkacem — AI Engineer and research intern at ÉTS Montréal (Synchromédia). Document image analysis, multimodal medical AI, big data ML pipelines, and full-stack products." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Ouadahi Mohand Belkacem, AI engineer and research intern at ÉTS Montréal (Synchromédia). Document image analysis, medical AI, big data ML pipelines and full-stack products." />
   <meta name="author" content="Ouadahi Mohand Belkacem" />
-  <title>Ouadahi Mohand Belkacem — Software &amp; AI Engineer</title>
+  <meta name="theme-color" content="#0A1022" />
+  <title>Ouadahi Mohand Belkacem | AI Engineer &amp; Researcher</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://swika1.github.io/" />
+  <meta property="og:title" content="Ouadahi Mohand Belkacem | AI Engineer &amp; Researcher" />
+  <meta property="og:description" content="Research intern at ÉTS Montréal working on the interpretable decomposition of degraded documents. Medical AI, big data and full-stack engineering." />
+  <meta property="og:image" content="https://swika1.github.io/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+  <link rel="preload" as="image" href="assets/portrait.webp" type="image/webp" />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/bricolage.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/hanken.woff2" crossorigin />
   <link href="css/styles.css" rel="stylesheet" />
+  <script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("loaded")},1600);</script>
 </head>
 <body>
-  <div class="bg-fx"></div>
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
-  <!-- Navigation -->
-  <nav class="nav" id="mainNav">
-    <div class="container">
-      <a class="brand" href="#home">
-        <span class="brand-mark">OB</span>
-        <span class="brand-name"><span class="full">Ouadahi Mohand Belkacem</span></span>
+  <!-- Top bar -->
+  <header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#home" aria-label="Back to top">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand-name">Ouadahi Mohand Belkacem</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#publications">Research</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a class="nav-cta" href="CV.pdf" target="_blank" rel="noopener">
-        Resume
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M12 3v13m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+      <nav class="toplinks" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-small" href="CV.pdf" target="_blank" rel="noopener">
+        CV
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v13m0 0-4-4m4 4 4-4M5 21h14"/></svg>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
     </div>
+  </header>
+
+  <!-- Mobile dock -->
+  <nav class="dock" id="dock" aria-label="Sections">
+    <a href="#about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>About</span></a>
+    <a href="#experience"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg><span>Work</span></a>
+    <a href="#research"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg><span>Research</span></a>
+    <a href="#projects"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Projects</span></a>
+    <a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span>Contact</span></a>
   </nav>
 
   <main>
     <!-- Hero -->
-    <header class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow">Research intern at ÉTS Montréal · Open to graduate research positions</div>
-          <h1 class="hero-title">Ouadahi Mohand<br />Belkacem</h1>
-          <div class="hero-role"><span class="role-label">Currently:</span><span id="roleText">AI Engineer</span><span class="cursor"></span></div>
-          <p class="hero-desc">
-            I design and ship <strong>AI systems</strong>, from clinical decision support and medical imaging to production ML pipelines processing terabytes of telecom data. Currently a <strong>research intern at ÉTS Montréal</strong> (Synchromédia lab), working on the interpretable decomposition of degraded historical documents, while continuing my AI engineering work at <strong>Numidia Institute of Technology</strong>.
-          </p>
-          <div class="hero-actions">
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <figure class="portrait" id="portrait">
+          <div class="portrait-stage">
+            <img class="portrait-img" id="portraitImg" src="assets/portrait.webp" width="800" height="762" alt="Portrait of Ouadahi Mohand Belkacem" />
+            <canvas id="rgbCanvas" aria-hidden="true"></canvas>
+            <span class="ch ch-r" aria-hidden="true">R</span>
+            <span class="ch ch-g" aria-hidden="true">G</span>
+            <span class="ch ch-b" aria-hidden="true">B</span>
+          </div>
+          <figcaption>
+            <span class="cap-touch">Drag the photo sideways</span><span class="cap-mouse">Move your cursor over the photo</span> to pull apart its red, green and blue layers. My research does the same with damaged documents, where there are more layers than channels.
+          </figcaption>
+        </figure>
+
+        <div class="hero-text">
+          <p class="status"><span class="pulse" aria-hidden="true"></span>Research intern at ÉTS Montréal</p>
+          <h1 class="name"><span class="name-a">Ouadahi</span><span class="name-b">Mohand Belkacem</span></h1>
+          <p class="role">AI engineer and researcher in computer vision, medical AI and document image analysis.</p>
+          <p class="lede">I build AI systems for healthcare at Numidia Institute of Technology and, since September 2026, research how to separate ink, paper and damage in degraded historical documents at the Synchromédia lab of ÉTS Montréal.</p>
+          <div class="actions">
             <a class="btn btn-primary" href="CV.pdf" target="_blank" rel="noopener">
               Download CV
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v13m0 0-4-4m4 4 4-4M5 21h14"/></svg>
             </a>
-            <a class="btn btn-ghost" href="#contact">
-              Get in touch
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
-            </a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
           </div>
-          <div class="contact-chips">
-            <a class="chip" href="https://github.com/swika1" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.69-1.28-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.77.12 3.06.74.8 1.19 1.82 1.19 3.08 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A10.53 10.53 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+          <div class="socials">
+            <a href="https://github.com/swika1" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.69-1.28-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.77.12 3.06.74.8 1.19 1.82 1.19 3.08 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A10.53 10.53 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
             </a>
-            <a class="chip" href="https://www.linkedin.com/in/mohand-belkacem-ouadahi-b801a7309/" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+            <a href="https://www.linkedin.com/in/mohand-belkacem-ouadahi-b801a7309/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" class="fill" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
             </a>
-            <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Montréal, Canada · Algiers, Algeria</span>
+            <a href="mailto:mohandbelkacemouadahi@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+            </a>
+            <span class="where"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Montréal and Algiers</span>
           </div>
-        </div>
-        <div class="hero-visual">
-          <div class="photo-frame">
-            <img src="assets/photo.png" alt="Portrait of Ouadahi Mohand Belkacem" />
-          </div>
-          <div class="float-card float-1"><div class="num">16.64/20</div><div class="lbl">Final year GPA</div></div>
-          <div class="float-card float-2"><div class="num">16+ TB</div><div class="lbl">telecom data processed</div></div>
-          <div class="float-card float-3"><div class="num">6+</div><div class="lbl">AI systems shipped</div></div>
         </div>
       </div>
-    </header>
+
+      <div class="wrap">
+        <dl class="stats">
+          <div><dt>16+ TB</dt><dd>telecom data in a production ML pipeline at Ooredoo</dd></div>
+          <div><dt>0.961</dt><dd>AUROC of my multimodal appendicitis model</dd></div>
+          <div><dt>16.64<small>/20</small></dt><dd>final-year GPA at NIT</dd></div>
+        </dl>
+      </div>
+    </section>
 
     <!-- About -->
     <section id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-text reveal">
-            <div class="eyebrow">About</div>
-            <p>I'm a Software &amp; AI Engineer working at the intersection of <strong>machine learning, medical AI, and full-stack engineering</strong>. My final-year academic record (16.64/20) sits alongside production work: a recommendation engine now serving <strong>Ooredoo Algeria's entire customer base</strong>, and a multimodal medical assistant combining speech recognition, imaging models, and retrieval-augmented clinical reasoning.</p>
-            <p>Outside of core engineering, I mentor student teams for national hackathons, sit on technical juries, and organize <strong>DevImpact</strong>, a multi-institution hackathon I built to grow Algeria's AI and software talent pipeline. I was also selected for <strong>Junction Asia</strong>, one of the most competitive international hackathon programs.</p>
-            <p>Since September 2026 I have been a research intern at the <strong>Synchromédia lab of ÉTS Montréal</strong> under Professor Mohamed Cheriet, where I study how to separate ink, paper and degradation in damaged document images using constrained, interpretable models. My longer-term goal is a PhD in AI.</p>
-            <p>I care about building things that actually ship — from privacy-first inference architectures to research-grade models that beat published benchmarks.</p>
-          </div>
-          <div class="fact-list reveal reveal-delay-1">
-            <div class="fact-card">
-              <div class="fk">Location</div>
-              <div class="fv">Montréal, Canada</div>
-              <div class="fv-sub">Until Jan 2027 · home base Algiers</div>
-            </div>
-            <div class="fact-card">
-              <div class="fk">Currently</div>
-              <div class="fv">Research Intern</div>
-              <div class="fv-sub">ÉTS Montréal · Synchromédia lab</div>
-            </div>
-            <div class="fact-card">
-              <div class="fk">Education</div>
-              <div class="fv">B.Sc. Autonomous Systems &amp; AI</div>
-              <div class="fv-sub">Numidia Institute of Technology</div>
-            </div>
-            <div class="fact-card">
-              <div class="fk">Languages</div>
-              <div class="fv">Arabic · English · French</div>
-              <div class="fv-sub">IELTS Band 7</div>
-            </div>
-          </div>
+      <div class="wrap about-grid">
+        <div class="head">
+          <h2>About</h2>
         </div>
+        <div class="about-text">
+          <p class="big">I work where <strong>machine learning, medical AI and full-stack engineering</strong> meet, and I care about building things that actually ship.</p>
+          <p>My final-year record (16.64/20) sits alongside production work: a recommendation engine serving <strong>Ooredoo Algeria's entire customer base</strong>, and healthcare AI research at NIT spanning computer vision, LLMs, NLP and speech recognition.</p>
+          <p>Since September 2026 I have been a research intern at the <strong>Synchromédia lab of ÉTS Montréal</strong> under Professor Mohamed Cheriet, studying how to separate ink, paper and degradation in damaged document images with constrained, interpretable models. My longer-term goal is a PhD in AI.</p>
+          <p>Outside of research I mentor student teams for national hackathons, sit on technical juries, and organize <strong>DevImpact</strong>, a multi-institution hackathon for Algeria's AI and software talent.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Location</dt><dd>Montréal, Canada<span>Until January 2027, home base Algiers</span></dd></div>
+          <div><dt>Currently</dt><dd>Research intern, ÉTS Montréal<span>And AI engineer at NIT</span></dd></div>
+          <div><dt>Education</dt><dd>B.Sc. Autonomous Systems &amp; AI<span>Numidia Institute of Technology</span></dd></div>
+          <div><dt>Languages</dt><dd>Arabic, English, French<span>IELTS Band 7</span></dd></div>
+        </dl>
       </div>
     </section>
 
     <!-- Experience -->
     <section id="experience">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="eyebrow">Career</div>
-          <h2>Where I've <span class="text-gradient">worked</span></h2>
-          <p>Research in Montréal, full-time AI engineering, an internship at a national telecom, and freelance client work — with AI in every one of them.</p>
+      <div class="wrap">
+        <div class="head">
+          <h2>Experience</h2>
+          <p>Research in Montréal, AI engineering at NIT, a national telecom, and freelance products.<span class="touch-only"> Tap a role to see the details.</span></p>
         </div>
 
-        <div class="timeline">
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-top">
-                <div class="tl-role">Research Intern — Document Image Analysis</div>
-                <div class="tl-date">Sep 2026 — Jan 2027</div>
-              </div>
-              <div class="tl-org">Synchromédia Lab, École de technologie supérieure (ÉTS) <span class="dot-sep">·</span> Montréal, Canada</div>
-              <ul class="tl-list">
-                <li>Research project: <em>Autonomous and Interpretable Decomposition of Degraded RGB Documents</em>, supervised by Prof. Mohamed Cheriet and co-supervised by Saida Khazri, within an emerging ÉTS–NIT research collaboration.</li>
-                <li>Problem: a degraded page mixes several physical layers (ink, paper, stains, bleed-through, fading) but an RGB scan records only 3 values per pixel. Recovering more layers than observed channels is an underdetermined inverse problem with infinitely many valid answers.</li>
-                <li>Approach: extending PRISM, the lab's interpretable decomposition model for multispectral documents, to the RGB case with sparsity, spatial-coherence and physics-informed constraints and automatic selection of the number of layers.</li>
-                <li>Gap addressed: PRISM on RGB has only been scored as binarization; whether its separate layers are correct has never been measured, because no layer-level ground truth exists. Building the foundations (document physics, colour spaces, metrics, PRISM reproduction on multispectral data) toward a controlled benchmark.</li>
+        <div class="jobs">
+          <details class="job job-now" open>
+            <summary>
+              <span class="job-when">Sep 2026 – Jan 2027</span>
+              <span class="job-role">Research Intern, Document Image Analysis</span>
+              <span class="job-org">Synchromédia Lab, ÉTS, Montréal</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="job-body">
+              <ul>
+                <li>Project: Autonomous and Interpretable Decomposition of Degraded RGB Documents, supervised by Prof. Mohamed Cheriet and co-supervised by Saida Khazri.</li>
+                <li>Challenge: a degraded manuscript mixes more physical layers (ink, paper, stains, bleed-through) than the 3 channels an RGB scan records, an underdetermined inverse problem with no unique solution.</li>
+                <li>Extending the lab's PRISM model to RGB with sparsity, spatial and physics-informed constraints.</li>
               </ul>
-              <div class="tag-row tl-tags">
-                <span class="tag">PyTorch</span><span class="tag">NMF</span><span class="tag">Multispectral imaging</span><span class="tag">Inverse problems</span>
-              </div>
+              <div class="tags"><span>PyTorch</span><span>NMF</span><span>Multispectral imaging</span><span>Inverse problems</span></div>
             </div>
-          </div>
+          </details>
 
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-top">
-                <div class="tl-role">AI Engineer — Full Time</div>
-                <div class="tl-date">Aug 2025 — Present</div>
-              </div>
-              <div class="tl-org">Numidia Institute of Technology (NIT) <span class="dot-sep">·</span> Algiers, Algeria</div>
-              <ul class="tl-list">
+          <details class="job">
+            <summary>
+              <span class="job-when">Aug 2025 – Present</span>
+              <span class="job-role">AI Engineer, Full Time</span>
+              <span class="job-org">Numidia Institute of Technology, Algiers</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="job-body">
+              <ul>
                 <li>Designing and building a multimodal AI medical assistant integrating ASR, X-ray/MRI imaging analysis (DenseNet-121, Xception, EfficientNet-B2), and OCR-based document automation.</li>
                 <li>Implementing RAG-powered clinical decision support using a ChromaDB vector database (1,200+ medical documents) with LLM orchestration (Qwen-72B, Mixtral-8x22B, DeepSeek-67B) for evidence-based diagnosis verification.</li>
                 <li>Designing a privacy-first local inference architecture for secure medical document processing.</li>
               </ul>
+              <div class="tags"><span>Computer vision</span><span>LLMs and RAG</span><span>ASR</span><span>OCR</span></div>
             </div>
-          </div>
+          </details>
 
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-top">
-                <div class="tl-role">AI Engineer — Internship</div>
-                <div class="tl-date">May 2025 — Aug 2025</div>
-              </div>
-              <div class="tl-org">Ooredoo Algeria <span class="dot-sep">·</span> Algiers, Algeria</div>
-              <ul class="tl-list">
+          <details class="job">
+            <summary>
+              <span class="job-when">May 2025 – Aug 2025</span>
+              <span class="job-role">AI Engineer, Internship</span>
+              <span class="job-org">Ooredoo Algeria, Algiers</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="job-body">
+              <ul>
                 <li>Designed and deployed a personalized subscription recommendation system now live in production for Ooredoo Algeria's entire customer base.</li>
                 <li>Built a Big Data architecture using PySpark and Cloudera Hadoop to process 400+ subscriber data files of 40–50 GB each (16+ TB total).</li>
                 <li>Delivered a complete end-to-end ML pipeline: feature engineering, model benchmarking, hyperparameter tuning, and production deployment.</li>
               </ul>
+              <div class="tags"><span>PySpark</span><span>Hadoop</span><span>Recommender systems</span></div>
             </div>
-          </div>
+          </details>
 
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-top">
-                <div class="tl-role">Full-Stack Developer &amp; AI Engineer — Freelance</div>
-                <div class="tl-date">2025 — Present</div>
-              </div>
-              <div class="tl-org">Private School Client <span class="dot-sep">·</span> Algiers, Algeria</div>
-              <ul class="tl-list">
-                <li>Built a comprehensive school management platform covering enrollment, staff management, payroll processing, and a parent communication portal.</li>
-                <li>Integrated AI-powered facial recognition to automate staff attendance tracking and parent-detection for secure child pickup notifications.</li>
+          <details class="job">
+            <summary>
+              <span class="job-when">2025 – Present</span>
+              <span class="job-role">Full-Stack &amp; AI Engineer, Freelance</span>
+              <span class="job-org">Private school client, Algiers</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="job-body">
+              <ul>
+                <li>Built a school management platform covering enrollment, staff management, payroll processing, and a parent communication portal.</li>
+                <li>Integrated AI facial recognition to automate staff attendance and detect parents for secure child pickup notifications.</li>
+              </ul>
+              <div class="tags"><span>Next.js</span><span>Supabase</span><span>Face recognition</span></div>
+            </div>
+          </details>
+
+          <details class="job">
+            <summary>
+              <span class="job-when">2025</span>
+              <span class="job-role">Full-Stack &amp; AI Engineer, Freelance</span>
+              <span class="job-org">Travel agency client, Algiers</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="job-body">
+              <ul>
+                <li>Designed and developed a full-stack web application for travel program management, an agency dashboard, and a client portal with third-party APIs.</li>
               </ul>
             </div>
-          </div>
+          </details>
 
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-top">
-                <div class="tl-role">Full-Stack Developer &amp; AI Engineer — Freelance</div>
-                <div class="tl-date">2025</div>
-              </div>
-              <div class="tl-org">Travel Agency Client <span class="dot-sep">·</span> Algiers, Algeria</div>
-              <ul class="tl-list">
-                <li>Designed and developed a full-stack web application for travel program management, an agency dashboard, and a client portal with integrated third-party APIs.</li>
+          <details class="job">
+            <summary>
+              <span class="job-when">2023 – Present</span>
+              <span class="job-role">Technical Mentor, Jury Member &amp; External Relations</span>
+              <span class="job-org">NCS Club, Numidia Institute of Technology</span>
+              <span class="chev" aria-hidden="true"></span>
+            </summary>
+            <div class="job-body">
+              <ul>
+                <li>Mentored student teams for national hackathons on AI system design, full-stack development, and ML pipelines.</li>
+                <li>Served as technical jury member and organized the DevImpact Hackathon, with participants from several Algerian institutions.</li>
+                <li>Built partnerships with organizations, companies and universities, and represented NIT at national and international events.</li>
               </ul>
             </div>
-          </div>
-
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-top">
-                <div class="tl-role">Technical Mentor &amp; Jury Member</div>
-                <div class="tl-date">2023 — Present</div>
-              </div>
-              <div class="tl-org">NCS Club, Numidia Institute of Technology <span class="dot-sep">·</span> Algiers, Algeria</div>
-              <ul class="tl-list">
-                <li>Mentored student teams participating in national hackathons on AI system design, full-stack development, and ML pipelines.</li>
-                <li>Served as technical jury member evaluating student projects at the DevImpact Hackathon.</li>
-                <li>Organized and managed logistics for DevImpact, attracting participants from multiple Algerian higher-education institutions.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-top">
-                <div class="tl-role">External Relations Manager</div>
-                <div class="tl-date">2023 — Present</div>
-              </div>
-              <div class="tl-org">NCS Club, Numidia Institute of Technology <span class="dot-sep">·</span> Algiers, Algeria</div>
-              <ul class="tl-list">
-                <li>Built institutional partnerships and managed external collaborations with organizations, companies, and universities.</li>
-                <li>Represented NIT at national and international events and competitions; coordinated sponsorships and technical event logistics.</li>
-              </ul>
-            </div>
-          </div>
+          </details>
         </div>
       </div>
     </section>
 
-    <!-- Projects / Research -->
+    <!-- Research -->
+    <section id="research">
+      <div class="wrap">
+        <div class="head">
+          <h2>Research</h2>
+          <p>Document image analysis at ÉTS Montréal, and multimodal medical AI.</p>
+        </div>
+
+        <article class="study study-main">
+          <div class="study-copy">
+            <p class="badge badge-live">Ongoing at ÉTS Montréal, 2026 – 2027</p>
+            <h3>Autonomous and Interpretable Decomposition of Degraded RGB Documents</h3>
+            <p class="byline">Supervised by Prof. Mohamed Cheriet and Saida Khazri, Synchromédia Lab</p>
+            <p>Old manuscripts degrade: ink fades or bleeds through the page, paper yellows, stains appear. Most archives are scanned in plain RGB, which keeps only three values per pixel, while the page holds more physical layers than that. Many different mixes of ink, paper and damage explain the same pixel, so separating them is an underdetermined inverse problem.</p>
+            <p>The question: can an interpretable model that chooses its own number of layers be constrained to recover meaningful components anyway? The plan is to build a benchmark with layer-level ground truth, adapt the lab's PRISM model to RGB with sparsity, spatial and physical constraints, and test it on handwriting recovery.</p>
+          </div>
+
+          <div class="explorer" id="explorer">
+            <div class="explorer-frame">
+              <canvas id="pageCanvas" width="900" height="640" role="img" aria-label="A synthetic degraded manuscript page built from separate layers"></canvas>
+              <span class="explorer-label" id="explorerLabel">The scan: every layer mixed</span>
+            </div>
+            <p class="explorer-hint">An illustration, not real data. The scan only records the mix. Toggle each layer to see what the model has to separate on its own.</p>
+            <div class="layer-toggles" role="group" aria-label="Layers">
+              <button type="button" class="lt" data-layer="ink" aria-pressed="true"><i style="--c:#3a2416"></i>Ink</button>
+              <button type="button" class="lt" data-layer="bleed" aria-pressed="true"><i style="--c:#a07a5c"></i>Bleed-through</button>
+              <button type="button" class="lt" data-layer="stain" aria-pressed="true"><i style="--c:#b08442"></i>Stains</button>
+              <button type="button" class="lt" data-layer="age" aria-pressed="true"><i style="--c:#d9c08a"></i>Yellowing</button>
+            </div>
+          </div>
+
+          <dl class="figures">
+            <div><dt>3 &lt; K</dt><dd>observed channels vs. hidden layers</dd></div>
+            <div><dt>K = ?</dt><dd>number of layers learned, not fixed</dd></div>
+            <div><dt>New</dt><dd>benchmark with layer-level ground truth</dd></div>
+          </dl>
+        </article>
+
+        <article class="study">
+          <div class="study-copy">
+            <p class="badge">Manuscript in preparation, 2026</p>
+            <h3>Multimodal Deep/Machine Learning for Pediatric Appendicitis Diagnosis</h3>
+            <p class="byline">Ouadahi Mohand Belkacem, et al. Target journal to be decided.</p>
+            <p>Ultrasound reading of pediatric appendicitis depends heavily on the operator, and single-modality models have shown limited reliability. This study combines ultrasound images and clinical data from the Regensburg Pediatric Appendicitis Dataset (782 patients, 2,097 images, 58 clinical features).</p>
+            <details class="more">
+              <summary>Read the results</summary>
+              <p>On clinical data, XGBoost reaches 94.23% accuracy and 0.9746 ROC-AUC with only 2 false negatives on the held-out test set. For images, the proposed ScaleAware-Attention architecture beats the published image-only state of the art by 0.06 AUROC. A fusion network joining the vision module with a GANDALF-based tabular branch through cross-attention reaches 0.9609 AUROC, with 100% recall on healthy patients and 100% precision on appendicitis predictions, a +19.7 point AUROC gain over the best image-only model.</p>
+            </details>
+          </div>
+          <dl class="figures four">
+            <div><dt>94.23%</dt><dd>XGBoost accuracy, clinical data</dd></div>
+            <div><dt>0.9746</dt><dd>ROC-AUC, clinical data</dd></div>
+            <div><dt>0.9609</dt><dd>AUROC, multimodal fusion</dd></div>
+            <div><dt>+19.7</dt><dd>AUROC points over image-only</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
     <section id="projects">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="eyebrow">Research &amp; Projects</div>
-          <h2>Systems I've <span class="text-gradient">built</span></h2>
-          <p>Independent research and product builds spanning medical AI, speech, computer vision, and mobile.</p>
-        </div>
-
-        <div class="card-grid">
-          <div class="proj-card reveal">
-            <div class="proj-top">
-              <div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v1a3 3 0 0 0-2 2.8V17a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V9.8a3 3 0 0 0-2-2.8V6a4 4 0 0 0-4-4Z"/><path d="M9 12h6M9 15h4"/></svg></div>
-              <span class="proj-year">2025 — Present</span>
-            </div>
-            <h3>AI-Powered Medical Assistant Pipeline</h3>
-            <p>End-to-end clinical decision support combining ASR, OCR, and deep learning for medical imaging, including a custom CNN for Alzheimer's detection.</p>
-            <div class="tag-row">
-              <span class="tag">DenseNet-121</span><span class="tag">Xception</span><span class="tag">EfficientNet-B2</span>
-            </div>
+      <div class="wrap">
+        <div class="head head-row">
+          <div>
+            <h2>Projects</h2>
+            <p>Research and product builds in medical AI, speech, vision and mobile.</p>
           </div>
-
-          <div class="proj-card reveal reveal-delay-1">
-            <div class="proj-top">
-              <div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4M9 22h6"/></svg></div>
-              <span class="proj-year">2025 — 2026</span>
-            </div>
-            <h3>DiaryAI — AI Personal Journal</h3>
-            <p>Multi-stage NLP pipeline with sentiment analysis, emotion classification, mood scoring, HealthKit biometric integration, and a voice-to-insight pipeline.</p>
-            <div class="tag-row">
-              <span class="tag">React Native</span><span class="tag">Gemini API</span><span class="tag">Supabase</span>
-            </div>
-          </div>
-
-          <div class="proj-card reveal reveal-delay-2">
-            <div class="proj-top">
-              <div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/></svg></div>
-              <span class="proj-year">2025 — 2026</span>
-            </div>
-            <h3>Handwritten Prescription OCR</h3>
-            <p>End-to-end OCR pipeline using CRAFT, TrOCR, and Tesseract with fuzzy medication-database matching and LLM semantic classification for Algerian prescriptions.</p>
-            <div class="tag-row">
-              <span class="tag">CRAFT</span><span class="tag">TrOCR</span><span class="tag">Qwen LLM</span>
-            </div>
-          </div>
-
-          <div class="proj-card reveal">
-            <div class="proj-top">
-              <div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div>
-              <span class="proj-year">2025</span>
-            </div>
-            <h3>BMI Prediction from Facial Images</h3>
-            <p>CNN-based model exceeding accuracy benchmarks from prior published research on the same dataset via novel preprocessing, augmentation, and architecture strategies.</p>
-            <div class="tag-row">
-              <span class="tag">PyTorch</span><span class="tag">CNN</span><span class="tag">Computer Vision</span>
-            </div>
-          </div>
-
-          <div class="proj-card reveal reveal-delay-1">
-            <div class="proj-top">
-              <div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3Z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v5"/></svg></div>
-              <span class="proj-year">2025</span>
-            </div>
-            <h3>Advanced ASR for Quran &amp; Prayer</h3>
-            <p>Custom speech recognition system with real-time mispronunciation detection; full MVP shipped on a Flutter / FastAPI / PostgreSQL stack.</p>
-            <div class="tag-row">
-              <span class="tag">Flutter</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span>
-            </div>
-          </div>
-
-          <div class="proj-card reveal reveal-delay-2">
-            <div class="proj-top">
-              <div class="proj-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></div>
-              <span class="proj-year">2026</span>
-            </div>
-            <h3>PPG-Based Heart Rate Analysis</h3>
-            <p>Smartphone photoplethysmography signal acquisition with real-time peak detection, synthetic waveform generation, and an HRV-enriched training-ready dataset pipeline.</p>
-            <div class="tag-row">
-              <span class="tag">Signal Processing</span><span class="tag">Swift</span><span class="tag">Dataset Generation</span>
-            </div>
+          <div class="track-nav">
+            <button type="button" class="tn" data-dir="-1" aria-label="Previous projects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+            <button type="button" class="tn" data-dir="1" aria-label="Next projects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Publications -->
-    <section id="publications">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="eyebrow">Research</div>
-          <h2>Current &amp; ongoing <span class="text-gradient">research</span></h2>
-          <p>Document image analysis at ÉTS Montréal, and multimodal medical AI from my work at NIT.</p>
-        </div>
-
-        <div class="pub-card reveal pub-gap">
-          <span class="pub-status">Ongoing · ÉTS Montréal · 2026 — 2027</span>
-          <h3>Autonomous and Interpretable Decomposition of Degraded RGB Documents</h3>
-          <div class="pub-authors">Ouadahi Mohand Belkacem — supervised by Prof. Mohamed Cheriet and Saida Khazri, Synchromédia Lab</div>
-          <p class="pub-abstract">
-            Historical manuscripts degrade: ink fades or bleeds through the page, paper yellows, stains and foxing appear. Separating these effects is key to restoring and reading the document, but most archives are digitized in plain RGB, which records only three values per pixel while the page contains more physical layers than that. Decomposing it is therefore an underdetermined inverse problem: many different combinations of ink, paper and damage explain the same pixel. The research question set for this project is whether an interpretable, rank-adaptive decomposition model can be constrained to recover meaningful components from degraded RGB documents despite having fewer observed channels than latent components. The work has three objectives: formalize the underdetermined RGB problem and build a controlled benchmark with layer-level ground truth; adapt the lab's PRISM model to RGB with sparsity, spatial and physically informed constraints; and validate interpretability, layer accuracy, recombination fidelity and handwriting recovery on synthetic and real documents.
-          </p>
-          <div class="pub-metrics">
-            <div class="metric"><div class="mv">3 &lt; K</div><div class="ml">observed channels vs. latent layers</div></div>
-            <div class="metric"><div class="mv">K = ?</div><div class="ml">number of layers learned, not fixed</div></div>
-            <div class="metric"><div class="mv">New</div><div class="ml">benchmark with layer-level ground truth</div></div>
-            <div class="metric"><div class="mv">3</div><div class="ml">objectives: benchmark, model, validation</div></div>
-          </div>
-        </div>
-
-        <div class="pub-card reveal">
-          <span class="pub-status">In preparation · 2026</span>
-          <h3>Multimodal Deep/Machine Learning for Pediatric Appendicitis Diagnosis</h3>
-          <div class="pub-authors">Ouadahi Mohand Belkacem, et al. — target journal TBD</div>
-          <p class="pub-abstract">
-            Pediatric appendicitis is a common surgical emergency where timely and accurate diagnosis is critical, yet ultrasound interpretation remains highly operator-dependent and single-modality models have shown limited clinical reliability. This work presents a complete multimodal deep and machine learning study for automated pediatric appendicitis diagnosis using the Regensburg Pediatric Appendicitis Dataset (782 patients, 2,097 ultrasound images, 58 clinical features). On structured clinical data, XGBoost achieves 94.23% accuracy with only 2 false negatives on the held-out test set. For ultrasound image classification, the proposed ScaleAware-Attention architecture surpasses the published image-only state of the art by 0.06 AUROC points. A Deep Multimodal Fusion Network combining the vision module with a GANDALF-based tabular branch through cross-attention achieves 100% recall on healthy patients and 100% precision on appendicitis predictions — a +19.7 percentage point AUROC improvement over the best image-only model.
-          </p>
-          <div class="pub-metrics">
-            <div class="metric"><div class="mv">94.23%</div><div class="ml">XGBoost accuracy on clinical data</div></div>
-            <div class="metric"><div class="mv">0.9746</div><div class="ml">ROC-AUC, structured data</div></div>
-            <div class="metric"><div class="mv">0.9609</div><div class="ml">AUROC, multimodal fusion</div></div>
-            <div class="metric"><div class="mv">+19.7pp</div><div class="ml">AUROC gain vs. image-only SOTA</div></div>
-          </div>
-        </div>
+      <div class="track" id="track">
+        <article class="proj" style="--tint: var(--r)">
+          <div class="proj-top"><span class="proj-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a4 4 0 0 0-4 4v1a3 3 0 0 0-2 2.8V17a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V9.8a3 3 0 0 0-2-2.8V6a4 4 0 0 0-4-4Z"/><path d="M9 12h6M9 15h4"/></svg></span><span class="proj-year">2025 – Present</span></div>
+          <h3>AI-Powered Medical Assistant Pipeline</h3>
+          <p>End-to-end clinical decision support combining ASR, OCR and deep learning for medical imaging, including a custom CNN for Alzheimer's detection.</p>
+          <div class="tags"><span>DenseNet-121</span><span>Xception</span><span>EfficientNet-B2</span></div>
+        </article>
+        <article class="proj" style="--tint: var(--g)">
+          <div class="proj-top"><span class="proj-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4M9 22h6"/></svg></span><span class="proj-year">2025 – 2026</span></div>
+          <h3>DiaryAI, AI Personal Journal</h3>
+          <p>Multi-stage NLP pipeline with sentiment analysis, emotion classification, mood scoring, HealthKit biometrics and a voice-to-insight pipeline.</p>
+          <div class="tags"><span>React Native</span><span>Gemini API</span><span>Supabase</span></div>
+        </article>
+        <article class="proj" style="--tint: var(--b)">
+          <div class="proj-top"><span class="proj-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/></svg></span><span class="proj-year">2025 – 2026</span></div>
+          <h3>Handwritten Prescription OCR</h3>
+          <p>OCR pipeline using CRAFT, TrOCR and Tesseract with fuzzy medication-database matching and LLM semantic classification for Algerian prescriptions.</p>
+          <div class="tags"><span>CRAFT</span><span>TrOCR</span><span>Qwen LLM</span></div>
+        </article>
+        <article class="proj" style="--tint: var(--r)">
+          <div class="proj-top"><span class="proj-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M5 21a7 7 0 0 1 14 0"/></svg></span><span class="proj-year">2025</span></div>
+          <h3>BMI Prediction from Facial Images</h3>
+          <p>CNN model exceeding the accuracy reported by prior published research on the same dataset, through new preprocessing, augmentation and architecture choices.</p>
+          <div class="tags"><span>PyTorch</span><span>CNN</span><span>Computer vision</span></div>
+        </article>
+        <article class="proj" style="--tint: var(--g)">
+          <div class="proj-top"><span class="proj-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h2M7 8v8M11 5v14M15 9v6M19 11v2"/></svg></span><span class="proj-year">2025</span></div>
+          <h3>Advanced ASR for Quran &amp; Prayer</h3>
+          <p>Custom speech recognition with real-time mispronunciation detection, shipped as a full MVP on Flutter, FastAPI and PostgreSQL.</p>
+          <div class="tags"><span>Flutter</span><span>FastAPI</span><span>PostgreSQL</span></div>
+        </article>
+        <article class="proj" style="--tint: var(--b)">
+          <div class="proj-top"><span class="proj-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg></span><span class="proj-year">2026</span></div>
+          <h3>PPG-Based Heart Rate Analysis</h3>
+          <p>Smartphone photoplethysmography with real-time peak detection, synthetic waveform generation and an HRV-enriched, training-ready dataset pipeline.</p>
+          <div class="tags"><span>Signal processing</span><span>Swift</span><span>Datasets</span></div>
+        </article>
       </div>
+      <div class="dots" id="dots" aria-hidden="true"></div>
     </section>
 
     <!-- Skills -->
     <section id="skills">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="eyebrow">Skills</div>
-          <h2>Tools &amp; <span class="text-gradient">technologies</span></h2>
-          <p>The stack I reach for across AI, mobile, backend, and data engineering work.</p>
+      <div class="wrap">
+        <div class="head">
+          <h2>Skills</h2>
+          <p>The stack I reach for across research, AI, mobile, backend and data engineering.</p>
         </div>
-
-        <div class="skills-grid">
-          <div class="skill-cat reveal">
-            <h4>Languages</h4>
-            <div class="pill-row">
-              <span class="pill">Python</span><span class="pill">JavaScript</span><span class="pill">React.js</span><span class="pill">Next.js</span><span class="pill">Node.js</span><span class="pill">Swift</span><span class="pill">C</span><span class="pill">HTML/CSS</span>
-            </div>
-          </div>
-          <div class="skill-cat reveal reveal-delay-1">
-            <h4>ML / AI</h4>
-            <div class="pill-row">
-              <span class="pill">TensorFlow</span><span class="pill">PyTorch</span><span class="pill">Scikit-learn</span><span class="pill">OpenCV</span><span class="pill">HuggingFace Transformers</span><span class="pill">Riva ASR</span><span class="pill">MLlib</span>
-            </div>
-          </div>
-          <div class="skill-cat reveal">
-            <h4>Mobile</h4>
-            <div class="pill-row">
-              <span class="pill">Flutter</span><span class="pill">React Native</span>
-            </div>
-          </div>
-          <div class="skill-cat reveal reveal-delay-1">
-            <h4>Big Data</h4>
-            <div class="pill-row">
-              <span class="pill">PySpark</span><span class="pill">Cloudera Hadoop</span>
-            </div>
-          </div>
-          <div class="skill-cat reveal">
-            <h4>Databases</h4>
-            <div class="pill-row">
-              <span class="pill">PostgreSQL</span><span class="pill">MongoDB</span><span class="pill">ChromaDB</span><span class="pill">Supabase</span>
-            </div>
-          </div>
-          <div class="skill-cat reveal">
-            <h4>Research Areas</h4>
-            <div class="pill-row">
-              <span class="pill">Computer Vision</span><span class="pill">Document Image Analysis</span><span class="pill">Medical Imaging</span><span class="pill">Matrix Factorization (NMF)</span><span class="pill">Inverse Problems</span><span class="pill">Multimodal Learning</span>
-            </div>
-          </div>
-          <div class="skill-cat reveal reveal-delay-1">
-            <h4>APIs &amp; Design</h4>
-            <div class="pill-row">
-              <span class="pill">Google Gemini</span><span class="pill">Groq</span><span class="pill">HuggingFace Router</span><span class="pill">FastAPI</span><span class="pill">Figma</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="lang-grid reveal reveal-delay-2">
-          <div class="lang-card">
-            <div class="lname">Arabic</div>
-            <div class="llevel">Native</div>
-            <div class="lang-bar"><span style="width: 100%"></span></div>
-          </div>
-          <div class="lang-card">
-            <div class="lname">English</div>
-            <div class="llevel">Fluent — IELTS Band 7</div>
-            <div class="lang-bar"><span style="width: 90%"></span></div>
-          </div>
-          <div class="lang-card">
-            <div class="lname">French</div>
-            <div class="llevel">Fluent</div>
-            <div class="lang-bar"><span style="width: 85%"></span></div>
-          </div>
+        <div class="skills">
+          <div class="skill"><h3>Research areas</h3><p>Computer vision, document image analysis, medical imaging, matrix factorization (NMF), inverse problems, multimodal learning</p></div>
+          <div class="skill"><h3>ML and AI</h3><p>PyTorch, TensorFlow, Scikit-learn, OpenCV, HuggingFace Transformers, Riva ASR, MLlib</p></div>
+          <div class="skill"><h3>Languages</h3><p>Python, JavaScript, React.js, Next.js, Node.js, Swift, C, HTML/CSS</p></div>
+          <div class="skill"><h3>Mobile</h3><p>Flutter, React Native</p></div>
+          <div class="skill"><h3>Big data</h3><p>PySpark, Cloudera Hadoop</p></div>
+          <div class="skill"><h3>Databases</h3><p>PostgreSQL, MongoDB, ChromaDB, Supabase</p></div>
+          <div class="skill"><h3>APIs and design</h3><p>Google Gemini, Groq, HuggingFace Router, FastAPI, Figma</p></div>
+          <div class="skill"><h3>Spoken languages</h3><p>Arabic (native), English (fluent, IELTS Band 7), French (fluent)</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="tight">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="eyebrow">Education</div>
-          <h2>Academic <span class="text-gradient">background</span></h2>
-        </div>
-        <div class="timeline">
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-top">
-                <div class="tl-role">Bachelor in Autonomous Systems and Ambient Software and Mobile AI</div>
-                <div class="tl-date">2023 — 2025</div>
-              </div>
-              <div class="tl-org">Numidia Institute of Technology (NIT) <span class="dot-sep">·</span> Algiers, Algeria</div>
-              <ul class="tl-list">
-                <li>Final Year GPA: 16.64 / 20 (4.0 / 4.0 equivalent)</li>
-                <li>Overall GPA: 14.36 / 20 (3.7 / 4.0 equivalent)</li>
-              </ul>
-            </div>
+    <!-- Education and honors -->
+    <section id="education">
+      <div class="wrap edu-grid">
+        <div>
+          <div class="head"><h2>Education</h2></div>
+          <div class="edu">
+            <p class="edu-when">2023 – 2025</p>
+            <h3>Bachelor in Autonomous Systems and Ambient Software and Mobile AI</h3>
+            <p class="edu-org">Numidia Institute of Technology (NIT), Algiers</p>
+            <p class="edu-gpa"><strong>16.64/20</strong> final year (4.0/4.0 equivalent), 14.36/20 overall (3.7/4.0)</p>
           </div>
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-top">
-                <div class="tl-role">Computer Science (Transferred)</div>
-                <div class="tl-date">2019 — 2023</div>
-              </div>
-              <div class="tl-org">Université M'hamed Bougara — Faculté des Sciences <span class="dot-sep">·</span> Boumerdès, Algeria</div>
-            </div>
+          <div class="edu">
+            <p class="edu-when">2019 – 2023</p>
+            <h3>Computer Science (transferred)</h3>
+            <p class="edu-org">Université M'hamed Bougara, Faculté des Sciences, Boumerdès</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Honors -->
-    <section id="honors" class="tight">
-      <div class="container">
-        <div class="section-head reveal">
-          <div class="eyebrow">Honors &amp; Achievements</div>
-          <h2>Recognition &amp; <span class="text-gradient">awards</span></h2>
-        </div>
-        <div class="honors-grid">
-          <div class="honor-card reveal">
-            <div class="honor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg></div>
-            <div><h4>Academic Excellence</h4><p>Final Year GPA 16.64/20 (4.0/4.0 equivalent), Numidia Institute of Technology, 2025.</p></div>
-          </div>
-          <div class="honor-card reveal reveal-delay-1">
-            <div class="honor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 1 16 0 8 8 0 0 1-16 0Z"/><path d="M12 8v4l3 2"/></svg></div>
-            <div><h4>IELTS Band 7</h4><p>International certification of fluent English-language proficiency.</p></div>
-          </div>
-          <div class="honor-card reveal reveal-delay-2">
-            <div class="honor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10M9 16h6"/></svg></div>
-            <div><h4>Cisco Networking Certification</h4><p>Professional certification in networking fundamentals and infrastructure.</p></div>
-          </div>
-          <div class="honor-card reveal">
-            <div class="honor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v4a8 8 0 0 1-16 0V4Z"/><path d="M9 20h6M12 16v4M2 6h2v2a3 3 0 0 1-3-3V6Zm20 0h-2v2a3 3 0 0 0 3-3V6Z"/></svg></div>
-            <div><h4>Junction Asia Hackathon</h4><p>Accepted into one of the most competitive international hackathon programs in Asia.</p></div>
-          </div>
-          <div class="honor-card reveal reveal-delay-1">
-            <div class="honor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-5 3 3 5-7"/></svg></div>
-            <div><h4>Research Achievement</h4><p>BMI prediction model surpassing published state-of-the-art benchmarks on the Regensburg dataset.</p></div>
-          </div>
-          <div class="honor-card reveal reveal-delay-2">
-            <div class="honor-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg></div>
-            <div><h4>Production Deployment at Ooredoo</h4><p>ML recommendation system deployed at national scale for Algeria's leading telecom provider.</p></div>
-          </div>
+        <div>
+          <div class="head"><h2>Recognition</h2></div>
+          <ul class="honors">
+            <li><strong>Academic excellence</strong>Final-year GPA 16.64/20 at NIT, 2025</li>
+            <li><strong>Production at national scale</strong>Ooredoo Algeria recommendation system</li>
+            <li><strong>Research achievement</strong>BMI model beating published benchmarks on the same dataset</li>
+            <li><strong>Junction Asia</strong>Accepted into one of Asia's most competitive hackathons</li>
+            <li><strong>IELTS Band 7</strong>Fluent English, international certification</li>
+            <li><strong>Cisco Networking</strong>Certification in networking fundamentals</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <div class="contact-card reveal">
-          <div class="eyebrow">Contact</div>
-          <h2>Let's build something<br /><span class="text-gradient">worth shipping.</span></h2>
-          <p>Open to graduate research positions, research collaborations, AI engineering roles, and freelance builds. The fastest way to reach me is email.</p>
-          <div class="contact-actions">
-            <a class="btn btn-primary" href="mailto:mohandbelkacemouadahi@gmail.com" data-copy="mohandbelkacemouadahi@gmail.com">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
-              mohandbelkacemouadahi@gmail.com
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact">
+          <h2>Let's build something worth shipping.</h2>
+          <p>Open to graduate research positions, research collaborations, AI engineering roles and freelance builds. Email is the fastest way to reach me.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="mailto:mohandbelkacemouadahi@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+              Email me
             </a>
-            <a class="btn btn-ghost" href="tel:+213796083974">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
-              +213 796 083 974
-            </a>
+            <button type="button" class="btn btn-ghost" data-copy="mohandbelkacemouadahi@gmail.com">Copy email address</button>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/mohand-belkacem-ouadahi-b801a7309/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
-          <div class="contact-socials">
-            <a class="social-btn" href="https://github.com/swika1" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.69-1.28-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.7 1.25 3.36.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.77.12 3.06.74.8 1.19 1.82 1.19 3.08 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.2.66.79.55A10.53 10.53 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
-            </a>
-            <a class="social-btn" href="https://www.linkedin.com/in/mohand-belkacem-ouadahi-b801a7309/" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
-            </a>
-            <a class="social-btn" href="mailto:mohandbelkacemouadahi@gmail.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
-            </a>
-          </div>
+          <p class="contact-line">mohandbelkacemouadahi@gmail.com<span>+213 796 083 974</span></p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Ouadahi Mohand Belkacem. Built from scratch.</p>
-      <p>Montréal, Canada · Algiers, Algeria</p>
+    <div class="wrap">
+      <p>© <span id="year">2026</span> Ouadahi Mohand Belkacem. Built from scratch.</p>
+      <p>Montréal and Algiers</p>
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-  </button>
-  <div class="toast" id="toast"></div>
-
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="js/scripts.js"></script>
 </body>
 </html>
